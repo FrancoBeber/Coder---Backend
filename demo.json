@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"title": "Producto1",
+		"description": "Producto para hacer algo",
+		"price": 1500,
+		"thumbnail": "sdasd",
+		"code": "A123HJ",
+		"stock": 100
+	},
+	{
+		"id": 3,
+		"title": "Producto3",
+		"description": "Producto 3",
+		"price": 5000,
+		"thumbnail": "fffwew",
+		"code": "ZZ55U",
+		"stock": 200
+	},
+	{
+		"id": 4,
+		"title": "Producto4",
+		"description": "Producto ",
+		"price": 7000,
+		"thumbnail": "rrrrr",
+		"code": "L34Y78",
+		"stock": 600
+	}
+]
