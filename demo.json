@@ -1,29 +1,29 @@
 [
 	{
 		"id": 1,
-		"title": "Producto1",
-		"description": "Producto para hacer algo",
-		"price": 1500,
-		"thumbnail": "sdasd",
-		"code": "A123HJ",
+		"title": "Auricular Redragon",
+		"description": "Auriculares para escuchar audio en alta calidad",
+		"price": 9500,
+		"thumbnail": "sin foto",
+		"code": "hja124",
 		"stock": 100
 	},
 	{
-		"id": 3,
-		"title": "Producto3",
-		"description": "Producto 3",
-		"price": 5000,
-		"thumbnail": "fffwew",
-		"code": "ZZ55U",
+		"id": 2,
+		"title": "Celular Samsung",
+		"description": "Celular marca samsung",
+		"price": 55000,
+		"thumbnail": "sin foto",
+		"code": "opl674",
 		"stock": 200
 	},
 	{
-		"id": 4,
-		"title": "Producto4",
-		"description": "Producto ",
+		"id": 3,
+		"title": "Mouse Redragon",
+		"description": "Mouse con 10000 dpi",
 		"price": 7000,
-		"thumbnail": "rrrrr",
-		"code": "L34Y78",
+		"thumbnail": "sin foto",
+		"code": "uib3332",
 		"stock": 600
 	}
 ]
