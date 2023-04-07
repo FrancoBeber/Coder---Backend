@@ -154,38 +154,4 @@ class ProductManager {
     this.saveProducts();
   };
 }
-
-//Valores de prueba como el ejemplo
-//defino el path en la misma ruta del archivo para hacer mas facil el resto del ejercicio
-const filename = "./demo.json";
-const productManager = new ProductManager(filename);
-//Traemos los productos del archivo original
-console.log("Los productos que ya tenia el archivo son: ");
-console.log(productManager.getProducts());
-productManager.addProduct(
-  "producto de prueba",
-  "Este es un producto de prueba",
-  200,
-  "sin imagen",
-  "abc123",
-  25
-);
-console.log("La lista de productos con el nuevo ingresado es: ");
-console.log(productManager.getProducts());
-console.log("El producto con id buscado es: ");
-console.log(productManager.getProductById(4));
-productManager.updateProduct(
-  4,
-  "producto de prueba modificado",
-  "modifico descripcion de prueba",
-  400,
-  "sin foto",
-  "zxc987",
-  125
-);
-console.log("La lista de productos con cambio es: ");
-console.log(productManager.getProducts());
-console.log("Eliminamos el producto con id indicado: ");
-productManager.deleteProduct(4);
-console.log("La lista de productos con cambio es: ");
-console.log(productManager.getProducts());
+export default ProductManager;
