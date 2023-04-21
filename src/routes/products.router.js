@@ -9,10 +9,12 @@ const productManager = new ProductManager(filename);
 router.use(express.json());
 
 router.get("/", (req, res) => {
+  let title = "Products";
   const result = +req.query.limit;
   if (!result) {
     let salida = productManager.getProducts();
-    res.send({ resultado: salida });
+    //res.send({ resultado: salida });
+    res.render("home", { salida, title });
   } else {
     let nuevo;
     let arr;
@@ -20,7 +22,8 @@ router.get("/", (req, res) => {
     nuevo = productManager.getProducts();
     arr = Array.from(nuevo);
     salida = arr.slice(0, result);
-    res.send({ resultado: salida });
+    //res.send({ resultado: salida });
+    res.render("home", { salida, title });
   }
 });
 
