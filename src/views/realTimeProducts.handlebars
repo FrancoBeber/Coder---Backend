@@ -1,0 +1,72 @@
+<div>
+  <h1>Bienvenido</h1>
+  <div>Complete los datos para dar de alta un producto:</div>
+  <form  id="charge">
+    <ul>
+      <li>
+        <label for="title">Titulo:</label>
+        <input type="text" id="title" name="title" />
+      </li>
+      <br />
+      <li>
+        <label for="price">Precio:</label>
+        <input type="text" id="price" name="price" />
+      </li>
+      <br />
+      <li>
+        <label for="description">Descripcion:</label>
+        <input type="text" id="description" name="description"></input>
+      </li>
+      <br>
+       <li>
+        <label for="thumbnail">Thumbnails:</label>
+        <input type="text" id="thumbnail" name="thumbnail"></input>
+      </li>
+      <br />
+      <li>
+        <label for="code">Codigo:</label>
+        <input type="text" id="code" name="code"></input>
+      </li>
+      <br />
+      <li>
+        <label for="stock">Stock:</label>
+        <input type="text" id="stock" name="stock"></input>
+      </li>
+      <br />
+      <li class="button">
+        <button type="submit" id="send"> Cargar producto</button>
+      </li>
+    </ul>
+  </form>
+</div>
+<br>
+<h2>Para eliminar un producto ingrese su id:</h2>
+<form id="delete">
+    <ul>
+        <li>
+        <label for="id">id:</label>
+        <input type="text" id="id" name="id" />
+      </li>
+      <br>
+      <li class="button">
+        <button type="submit" id="kill"> eliminar producto</button>
+      </li>
+    </ul>
+</form>
+<br>
+  <div>La lista de productos es:</div>
+  <ul>
+    {{#each salida}}
+      <li>{{this.title}}</li>
+      <li>{{this.description}}</li>
+      <li>{{this.price}}</li>
+      <li>{{this.thumbnail}}</li>
+      <li>{{this.code}}</li>
+      <li>{{this.stock}}</li>
+      <br />
+      <br />
+    {{/each}}
+  </ul>
+</div>
+
+<script src="realTimeProducts.js"></script>
