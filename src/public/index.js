@@ -1,5 +1,5 @@
-let socket;
 let user = "";
+//const socket = io();
 
 Swal.fire({
   title: "Administrador de productos",

@@ -6,6 +6,7 @@ let thumbnail = document.querySelector("#thumbnail");
 let code = document.querySelector("#code");
 let stock = document.querySelector("#stock");
 */
+const socket = io();
 let title;
 let description;
 let price;
@@ -41,7 +42,17 @@ document.querySelector("#stock").addEventListener("change", function () {
   console.log(stock);
 });
 document.querySelector("#send").addEventListener("click", function () {
+  let data = {
+    title: title,
+    description: description,
+    price: price,
+    thumbnail: thumbnail,
+    code: code,
+    stock: stock,
+  };
   postProduct(title, description, price, thumbnail, code, stock);
+  //socket.emit("create", data);
+  socket.emit("create", "Se creo un elemento");
 });
 document.querySelector("#id").addEventListener("change", function () {
   id = this.value;
@@ -49,6 +60,7 @@ document.querySelector("#id").addEventListener("change", function () {
 });
 document.querySelector("#kill").addEventListener("click", function () {
   deleteProduct(id);
+  socket.emit("delete", "Se elimino un elemento");
 });
 
 async function deleteProduct(id) {
@@ -76,7 +88,16 @@ async function postProduct(title, description, price, thumbnail, code, stock) {
     },
   });
 }
-
+/*
+socket.on("history", (data) => {
+  let history = document.getElementById("history");
+  let productos = "";
+  data.array.forEach((element) => {
+    productos += `${element}<br />`;
+  });
+  history.innerHTML = productos;
+});
+*/
 async function getAllProducts() {
   let r = await fetch("http://localhost:8080/realtimeproducts", {
     method: "get",
