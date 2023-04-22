@@ -76,3 +76,15 @@ async function postProduct(title, description, price, thumbnail, code, stock) {
     },
   });
 }
+
+async function getAllProducts() {
+  let r = await fetch("http://localhost:8080/realtimeproducts", {
+    method: "get",
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
+  getAllProducts();
+}
+
+getAllProducts();
